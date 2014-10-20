@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TravelActivity" >
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewPickup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_pickup_location"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewDropOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/autoCompleteTextViewPickup"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_dropoff_location"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/textViewDatePicker"
+        style="@android:style/Widget.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autoCompleteTextViewDropOff"
+        android:layout_below="@+id/autoCompleteTextViewDropOff"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/imageViewCalendarIcon"
+        android:focusable="false"
+        android:onClick="displayDatePicker" />
+
+    <ImageView
+        android:id="@+id/imageViewCalendarIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignBottom="@+id/textViewDatePicker"
+        android:layout_alignRight="@+id/autoCompleteTextViewDropOff"
+        android:layout_marginRight="3dp"
+        android:contentDescription="@string/departure_date"
+        android:onClick="displayDatePicker"
+        android:src="@drawable/icon_calendar" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDatePicker"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:onClick="search"
+        android:text="@string/search" />
+
+</RelativeLayout>

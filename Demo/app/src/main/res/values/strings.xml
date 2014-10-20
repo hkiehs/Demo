@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="hint_pickup_location">From: City, Town or Village</string>
+    <string name="hint_dropoff_location">To: City, Town or Village</string>
+    <string name="search">Search</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="search_not_implemented">Search is not yet implemented</string>
+    <string name="dialog_tag">Location Request</string>
+</resources>
